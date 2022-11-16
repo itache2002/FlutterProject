@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 import 'sign_in.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'home.dart';
+import 'Bottomnavbar.dart';
 
 
 class LoginForm extends StatefulWidget {
@@ -17,6 +17,11 @@ class _LoginFormState extends State<LoginForm> {
   TextEditingController nameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   GlobalKey <FormState>formkey= GlobalKey<FormState>();
+
+  void clearText(){
+    nameController.clear();
+    passwordController.clear();
+  }
 
 
 
@@ -103,7 +108,9 @@ class _LoginFormState extends State<LoginForm> {
                               print("Error${error.toString()}")
                             })
                           });
-                    }else{
+                    }
+                    else
+                    {
                       print("Error");
                     }
                   },

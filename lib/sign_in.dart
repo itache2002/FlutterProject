@@ -59,8 +59,6 @@ class _MySinginState extends State<MySingin> {
      }).onError((error, stackTrace) => {
        print("Error ${error.toString()}")
      });
-
-
   }
   @override
   Widget build(BuildContext context) {
